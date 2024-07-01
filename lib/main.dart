@@ -38,15 +38,52 @@ class MyApp extends StatelessWidget {
                 Row(
                   children: [
                     Container(
-                      width: 300,
-                      child: const SearchBar(
-                        hintText: 'Search',
+                      width: 330,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 20),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            filled: true,
+                            fillColor: const Color.fromARGB(255, 230, 234, 237),
+                            hintText: 'Search',
+                            prefixIcon: const Icon(Icons.search),
+                            border: OutlineInputBorder(
+                              borderSide: BorderSide.none,
+                              borderRadius: BorderRadius.circular(5),
+                            ),
+                          ),
+                        ),
                       ),
                     ),
                     const IconButton(
-                        onPressed: null, icon: const Icon(Icons.info))
+                        onPressed: null,
+                        icon: Icon(
+                          Icons.tune,
+                          color: Colors.black,
+                        ))
                   ],
-                )
+                ),
+                Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20, top: 10),
+                      child: Container(
+                          padding: const EdgeInsets.only(
+                              top: 10, left: 10, right: 10, bottom: 10),
+                          decoration: BoxDecoration(
+                              color: const Color.fromARGB(255, 230, 234, 237),
+                              borderRadius: BorderRadius.circular(20)),
+                          child: const Text("May 24, 2022")),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Text("14:45PM"),
+                  ],
+                ),
+                Text("Emmanuael Rockson"),
+                Text("Kwabena Uncle Ebo"),
               ],
             )));
   }
