@@ -82,8 +82,36 @@ class MyApp extends StatelessWidget {
                     Text("14:45PM"),
                   ],
                 ),
-                Text("Emmanuael Rockson"),
-                Text("Kwabena Uncle Ebo"),
+                Column(
+                  children: [
+                    Text("Emmanuael Rockson"),
+                    Text("Kwabena Uncle Ebo"),
+                    Text("024 123 4567"),
+                  ],
+                ),
+                Spacer(),
+                ElevatedButton(
+                  onPressed: null,
+                  child: Row(
+                    children: [
+                      Icon(Icons.add, color: Colors.white, size: 20),
+                      Container(
+                          width: 200,
+                          color: Colors.amber,
+                          child: Text("Send New")),
+                    ],
+                  ),
+                ),
+                BottomNavigationBar(
+                  items: const [
+                    BottomNavigationBarItem(
+                        icon: Icon(Icons.home), label: "Home"),
+                    BottomNavigationBarItem(
+                        icon: Icon(Icons.money), label: "Send"),
+                    BottomNavigationBarItem(
+                        icon: Icon(Icons.calendar_today), label: "Scheduled"),
+                  ],
+                )
               ],
             )));
   }
